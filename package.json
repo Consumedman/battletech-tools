@@ -32,7 +32,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build-r https://x-access-token:${GITHUB_TOKEN}@github.com/Consumedman/battletech-tools.git",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
