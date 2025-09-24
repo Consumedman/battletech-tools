@@ -232,6 +232,18 @@ export default class AlphaStrikeUnitSVG extends React.Component<IAlphaStrikeUnit
         return dots;
     }
 
+     // Helper to halve all numbers in a range string, preserving symbols and formatting
+    private _halveRangeValue = (range: string): string => {
+        // Replace every number (integer or decimal) with its half, preserving the rest
+        return range.replace(/(\d+(\.\d+)?)/g, (match) => {
+            const num = parseFloat(match);
+            if (isNaN(num)) return match;
+            // Keep as integer if possible, else one decimal
+            const halved = num / 2;
+            return Number.isInteger(halved) ? halved.toString() : halved.toFixed(1).replace(/\.0$/, "");
+        });
+    }
+
     private _splitAbilities = ( val: string ): string[][] => {
         val = val.trim();
         let words = val.split(",");
@@ -357,14 +369,14 @@ export default class AlphaStrikeUnitSVG extends React.Component<IAlphaStrikeUnit
                 {this.props.measurementsInHexes ? (
                     <text x="540" y="140" fontFamily="sans-serif" textAnchor="end" fontSize="25">MV: {this.props.asUnit.currentMoveHexes.trim()}</text>
                 ) : (
-                    <text x="540" y="140" fontFamily="sans-serif" textAnchor="end" fontSize="25">MV: {this.props.asUnit.currentMove.trim()}</text>
+                    <text x="540" y="140" fontFamily="sans-serif" textAnchor="end" fontSize="25">MV: {this._halveRangeValue(this.props.asUnit.currentMove.trim())}</text>
                 )}
                 {this.props.asUnit.isGroundUnit() ? (
                     <>
                         {this.props.measurementsInHexes ? (
                             <text x="540" y="155" fontFamily="sans-serif" textAnchor="end" fontSize="15">Sprint: {this.props.asUnit.currentMoveHexesSprint.trim()}</text>
                         ) : (
-                            <text x="540" y="155" fontFamily="sans-serif" textAnchor="end" fontSize="15">Sprint: {this.props.asUnit.currentMoveSprint.trim()}</text>
+                            <text x="540" y="155" fontFamily="sans-serif" textAnchor="end" fontSize="15">Sprint: {this._halveRangeValue(this.props.asUnit.currentMoveSprint.trim())}</text>
                         )}
                     </>
                 )  : null}
@@ -383,7 +395,7 @@ export default class AlphaStrikeUnitSVG extends React.Component<IAlphaStrikeUnit
                 {this.props.measurementsInHexes ? (
                     <text x={damageLabelColWidth+(damageColWidth*0)} y="300" fontFamily="sans-serif" textAnchor="middle" fontSize="20">0-3⬣</text>
                 ) : (
-                    <text x={damageLabelColWidth+(damageColWidth*0)} y="300" fontFamily="sans-serif" textAnchor="middle" fontSize="20">0-6"</text>
+                    <text x={damageLabelColWidth+(damageColWidth*0)} y="300" fontFamily="sans-serif" textAnchor="middle" fontSize="20">0-3"</text>
                 )}
 
 
@@ -396,7 +408,7 @@ export default class AlphaStrikeUnitSVG extends React.Component<IAlphaStrikeUnit
                 {this.props.measurementsInHexes ? (
                     <text x={damageLabelColWidth+(damageColWidth*1)} y="300" fontFamily="sans-serif" textAnchor="middle" fontSize="20">4-12⬣</text>
                 ) : (
-                <text x={damageLabelColWidth+(damageColWidth*1)} y="300" fontFamily="sans-serif" textAnchor="middle" fontSize="20">6"-24"</text>
+                <text x={damageLabelColWidth+(damageColWidth*1)} y="300" fontFamily="sans-serif" textAnchor="middle" fontSize="20">3"-12"</text>
                 )}
 
                 <text x={damageLabelColWidth+(damageColWidth*1)} y="280" fontFamily="sans-serif" textAnchor="middle" fontSize={35}>{this.props.asUnit.currentDamage.medium}{this.props.asUnit.currentDamage.mediumMinimal ? "*" : ""}</text>
@@ -409,7 +421,7 @@ export default class AlphaStrikeUnitSVG extends React.Component<IAlphaStrikeUnit
                 {this.props.measurementsInHexes ? (
                     <text x={damageLabelColWidth+(damageColWidth*2)} y="300" fontFamily="sans-serif" textAnchor="middle" fontSize="20">13-21⬣</text>
                 ) : (
-                    <text x={damageLabelColWidth+(damageColWidth*2)} y="300" fontFamily="sans-serif" textAnchor="middle" fontSize="20">24"-42"</text>
+                    <text x={damageLabelColWidth+(damageColWidth*2)} y="300" fontFamily="sans-serif" textAnchor="middle" fontSize="20">12"-21"</text>
                 )}
                 <text x={damageLabelColWidth+(damageColWidth*2)} y="280" fontFamily="sans-serif" textAnchor="middle" fontSize={35}>{this.props.asUnit.currentDamage.long}{this.props.asUnit.currentDamage.longMinimal ? "*" : ""}</text>
                 {this.props.showExtreme && this.props.asUnit.damage.extreme > 0 ? ( this.props.forPrint ? (
