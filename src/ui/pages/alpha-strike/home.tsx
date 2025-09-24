@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 import { IAppGlobals } from '../../app-router';
 import TextSection from '../../components/text-section';
 import UIPage from '../../components/ui-page';
-import { MdTableView } from "react-icons/md";
+import { MdTableView as MdTableViewRaw } from "react-icons/md";
+// ...existing code...
+const MdTableView = MdTableViewRaw as unknown as React.ComponentType<any>;
 
 export default class AlphaStrikeHome extends React.Component<IAlphaStrikeHomeProps, IAlphaStrikeHomeState> {
     constructor(props: IAlphaStrikeHomeProps) {

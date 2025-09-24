@@ -1,5 +1,9 @@
 import * as React from 'react';
-import { FaCheckCircle, FaEye, FaPlusCircle, FaTimesCircle } from 'react-icons/fa';
+import { FaCheckCircle as FaCheckCircleRaw, FaEye as FaEyeRaw, FaPlusCircle as FaPlusCircleRaw, FaTimesCircle as FaTimesCircleRaw } from 'react-icons/fa';
+const FaCheckCircle = FaCheckCircleRaw as unknown as React.ComponentType<any>;
+const FaEye = FaEyeRaw as unknown as React.ComponentType<any>;
+const FaPlusCircle = FaPlusCircleRaw as unknown as React.ComponentType<any>;
+const FaTimesCircle = FaTimesCircleRaw as unknown as React.ComponentType<any>;
 import { Link } from "react-router-dom";
 import { BattleMech } from '../../../../classes/battlemech';
 import { BattleMechGroup } from '../../../../classes/battlemech-group';

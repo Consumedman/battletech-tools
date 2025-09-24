@@ -1,5 +1,12 @@
 import React from 'react';
-import { FaArrowCircleRight, FaFile, FaFileExport, FaFolderOpen, FaSave, FaTrash } from "react-icons/fa";
+import { FaArrowCircleRight as FaArrowCircleRightRaw, FaFile as FaFileRaw, FaFileExport as FaFileExportRaw, FaFolderOpen as FaFolderOpenRaw, FaSave as FaSaveRaw, FaTrash as FaTrashRaw } from "react-icons/fa";
+// ...existing code...
+const FaArrowCircleRight = FaArrowCircleRightRaw as unknown as React.ComponentType<any>;
+const FaFile = FaFileRaw as unknown as React.ComponentType<any>;
+const FaFileExport = FaFileExportRaw as unknown as React.ComponentType<any>;
+const FaFolderOpen = FaFolderOpenRaw as unknown as React.ComponentType<any>;
+const FaSave = FaSaveRaw as unknown as React.ComponentType<any>;
+const FaTrash = FaTrashRaw as unknown as React.ComponentType<any>;
 import { Link } from 'react-router-dom';
 import { BattleMech, IBattleMechExport } from '../../../../classes/battlemech';
 import { IAppGlobals } from '../../../app-router';

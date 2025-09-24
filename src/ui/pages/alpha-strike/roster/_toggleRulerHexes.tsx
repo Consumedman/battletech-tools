@@ -1,6 +1,10 @@
 import * as React from 'react';
-import { FaRuler } from 'react-icons/fa';
-import { FiHexagon } from 'react-icons/fi';
+import { FaRuler as FaRulerRaw } from 'react-icons/fa';
+// ...existing code...
+const FaRuler = FaRulerRaw as unknown as React.ComponentType<any>;
+import { FiHexagon as FiHexagonRaw } from 'react-icons/fi';
+// ...existing code...
+const FiHexagon = FiHexagonRaw as unknown as React.ComponentType<any>;
 import { IAppGlobals } from '../../../app-router';
 
 

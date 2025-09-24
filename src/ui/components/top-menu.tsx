@@ -1,6 +1,8 @@
 
 import React from 'react';
-import { FaBars } from "react-icons/fa";
+import { FaBars as FaBarsRaw } from "react-icons/fa";
+// ...existing code...
+const FaBars = FaBarsRaw as unknown as React.ComponentType<any>;
 import { Link } from 'react-router-dom';
 import { CONST_BATTLETECH_URL } from '../../configVars';
 import { IAppGlobals } from '../app-router';

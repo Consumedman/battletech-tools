@@ -1,6 +1,10 @@
 
-import { FaSquare, FaCheckCircle, FaTimesCircle, FaCheckSquare } from "react-icons/fa";
 import * as React from 'react';
+import { FaSquare as FaSquareRaw, FaCheckCircle as FaCheckCircleRaw, FaTimesCircle as FaTimesCircleRaw, FaCheckSquare as FaCheckSquareRaw } from "react-icons/fa";
+const FaCheckCircle = FaCheckCircleRaw as unknown as React.ComponentType<any>;
+const FaTimesCircle = FaTimesCircleRaw as unknown as React.ComponentType<any>;
+const FaCheckSquare = FaCheckSquareRaw as unknown as React.ComponentType<any>;
+const FaSquare = FaSquareRaw as unknown as React.ComponentType<any>;
 
 export default class InputCheckbox extends React.Component<IInputCheckboxProps, IInputCheckboxState> {
 

@@ -1,8 +1,22 @@
 import React from 'react';
 import { CrosshairArrow, HotSurface, MagnifyingGlass } from 'react-game-icons';
-import { FaArrowCircleDown, FaArrowCircleLeft, FaArrowCircleRight, FaCheckSquare, FaDice, FaGift, FaQuestionCircle, FaShoePrints, FaSquare, FaTable } from "react-icons/fa";
-import { FiRefreshCcw } from 'react-icons/fi';
-import { GiBattleAxe, GiMissileSwarm } from 'react-icons/gi';
+import { FaArrowCircleDown as FaArrowCircleDownRaw, FaArrowCircleLeft as FaArrowCircleLeftRaw, FaArrowCircleRight as FaArrowCircleRightRaw, FaCheckSquare as FaCheckSquareRaw, FaDice as FaDiceRaw, FaGift as FaGiftRaw, FaQuestionCircle as FaQuestionCircleRaw, FaShoePrints as FaShoePrintsRaw, FaSquare as FaSquareRaw, FaTable as FaTableRaw } from "react-icons/fa";
+// ...existing code...
+const FaArrowCircleDown = FaArrowCircleDownRaw as unknown as React.ComponentType<any>;
+const FaArrowCircleLeft = FaArrowCircleLeftRaw as unknown as React.ComponentType<any>;
+const FaArrowCircleRight = FaArrowCircleRightRaw as unknown as React.ComponentType<any>;
+const FaCheckSquare = FaCheckSquareRaw as unknown as React.ComponentType<any>;
+const FaDice = FaDiceRaw as unknown as React.ComponentType<any>;
+const FaGift = FaGiftRaw as unknown as React.ComponentType<any>;
+const FaQuestionCircle = FaQuestionCircleRaw as unknown as React.ComponentType<any>;
+const FaShoePrints = FaShoePrintsRaw as unknown as React.ComponentType<any>;
+const FaSquare = FaSquareRaw as unknown as React.ComponentType<any>;
+const FaTable = FaTableRaw as unknown as React.ComponentType<any>;
+import { FiRefreshCcw as FiRefreshCcwRaw } from 'react-icons/fi';
+const FiRefreshCcw = FiRefreshCcwRaw as unknown as React.ComponentType<any>;
+import { GiBattleAxe as GiBattleAxeRaw, GiMissileSwarm as GiMissileSwarmRaw } from 'react-icons/gi';
+const GiBattleAxe = GiBattleAxeRaw as unknown as React.ComponentType<any>;
+const GiMissileSwarm = GiMissileSwarmRaw as unknown as React.ComponentType<any>;
 import { Link } from 'react-router-dom';
 import { BattleMech, IGATOR, ITargetToHit } from "../../../../classes/battlemech";
 import { BattleMechGroup } from '../../../../classes/battlemech-group';

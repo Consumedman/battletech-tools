@@ -1,5 +1,12 @@
 import React from 'react';
-import { FaDice, FaDownload, FaFileImport, FaHeart, FaPrint, FaTrash } from "react-icons/fa";
+import { FaDice as FaDiceRaw, FaDownload as FaDownloadRaw, FaFileImport as FaFileImportRaw, FaHeart as FaHeartRaw, FaPrint as FaPrintRaw, FaTrash as FaTrashRaw } from "react-icons/fa";
+// ...existing code...
+const FaDice = FaDiceRaw as unknown as React.ComponentType<any>;
+const FaDownload = FaDownloadRaw as unknown as React.ComponentType<any>;
+const FaFileImport = FaFileImportRaw as unknown as React.ComponentType<any>;
+const FaHeart = FaHeartRaw as unknown as React.ComponentType<any>;
+const FaPrint = FaPrintRaw as unknown as React.ComponentType<any>;
+const FaTrash = FaTrashRaw as unknown as React.ComponentType<any>;
 import { Link } from 'react-router-dom';
 import { BattleMech } from "../../../../classes/battlemech";
 import { BattleMechGroup, ICBTGroupExport } from '../../../../classes/battlemech-group';

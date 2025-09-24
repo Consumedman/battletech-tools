@@ -1,5 +1,9 @@
 import * as React from 'react';
-import { FaBars, FaEye, FaPlus } from "react-icons/fa";
+import { FaBars as FaBarsRaw, FaEye as FaEyeRaw, FaPlus as FaPlusRaw } from "react-icons/fa";
+// ...existing code...
+const FaBars = FaBarsRaw as unknown as React.ComponentType<any>;
+const FaEye = FaEyeRaw as unknown as React.ComponentType<any>;
+const FaPlus = FaPlusRaw as unknown as React.ComponentType<any>;
 import { AlphaStrikeUnit, IASMULUnit } from '../../../../classes/alpha-strike-unit';
 import { BattleMech } from '../../../../classes/battlemech';
 import { getMULASSearchResults } from '../../../../utils';

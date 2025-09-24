@@ -1,6 +1,12 @@
 import React from 'react';
-import { FaArrowCircleLeft, FaList, FaTh } from "react-icons/fa";
-import { FiRefreshCcw } from "react-icons/fi";
+import { FaArrowCircleLeft as FaArrowCircleLeftRaw, FaList as FaListRaw, FaTh as FaThRaw } from "react-icons/fa";
+// ...existing code...
+const FaArrowCircleLeft = FaArrowCircleLeftRaw as unknown as React.ComponentType<any>;
+const FaList = FaListRaw as unknown as React.ComponentType<any>;
+const FaTh = FaThRaw as unknown as React.ComponentType<any>;
+import { FiRefreshCcw as FiRefreshCcwRaw } from "react-icons/fi";
+// ...existing code...
+const FiRefreshCcw = FiRefreshCcwRaw as unknown as React.ComponentType<any>;
 import { Link } from 'react-router-dom';
 import AlphaStrikeGroup from '../../../../classes/alpha-strike-group';
 import { CONST_BATTLETECH_URL } from '../../../../configVars';

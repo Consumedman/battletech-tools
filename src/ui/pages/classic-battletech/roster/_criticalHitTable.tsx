@@ -1,6 +1,8 @@
 import * as React from 'react';
-import { FaCheckSquare } from 'react-icons/fa';
-import { MdDangerous } from 'react-icons/md';
+import { FaCheckSquare as FaCheckSquareRaw } from 'react-icons/fa';
+const FaCheckSquare = FaCheckSquareRaw as unknown as React.ComponentType<any>;
+import { MdDangerous as MdDangerousRaw } from 'react-icons/md';
+const MdDangerous = MdDangerousRaw as unknown as React.ComponentType<any>;
 import { BattleMech, ICriticalSlot } from '../../../../classes/battlemech';
 import { getLocationName } from '../../../../utils';
 import { makeRange } from '../../../../utils/makeRange';

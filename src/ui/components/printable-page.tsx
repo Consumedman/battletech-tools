@@ -1,6 +1,9 @@
 
 import React from 'react';
-import { FaArrowCircleLeft, FaPrint } from "react-icons/fa";
+import { FaArrowCircleLeft as FaArrowCircleLeftRaw, FaPrint as FaPrintRaw } from "react-icons/fa";
+// ...existing code...
+const FaArrowCircleLeft = FaArrowCircleLeftRaw as unknown as React.ComponentType<any>;
+const FaPrint = FaPrintRaw as unknown as React.ComponentType<any>;
 import { Link } from 'react-router-dom';
 import { CONST_BATTLETECH_URL } from '../../configVars';
 import { IAppGlobals } from '../app-router';

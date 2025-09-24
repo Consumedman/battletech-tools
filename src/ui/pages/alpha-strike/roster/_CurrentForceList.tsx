@@ -1,6 +1,16 @@
 import * as React from 'react';
-import { AiOutlineWarning } from 'react-icons/ai';
-import { FaArrowsAlt, FaBars, FaEdit, FaExclamationTriangle, FaHeart, FaPlus, FaTrash } from "react-icons/fa";
+import { AiOutlineWarning as AiOutlineWarningRaw } from 'react-icons/ai';
+// ...existing code...
+const AiOutlineWarning = AiOutlineWarningRaw as unknown as React.ComponentType<any>;
+import { FaArrowsAlt as FaArrowsAltRaw, FaBars as FaBarsRaw, FaEdit as FaEditRaw, FaExclamationTriangle as FaExclamationTriangleRaw, FaHeart as FaHeartRaw, FaPlus as FaPlusRaw, FaTrash as FaTrashRaw } from "react-icons/fa";
+// ...existing code...
+const FaArrowsAlt = FaArrowsAltRaw as unknown as React.ComponentType<any>;
+const FaBars = FaBarsRaw as unknown as React.ComponentType<any>;
+const FaEdit = FaEditRaw as unknown as React.ComponentType<any>;
+const FaExclamationTriangle = FaExclamationTriangleRaw as unknown as React.ComponentType<any>;
+const FaHeart = FaHeartRaw as unknown as React.ComponentType<any>;
+const FaPlus = FaPlusRaw as unknown as React.ComponentType<any>;
+const FaTrash = FaTrashRaw as unknown as React.ComponentType<any>;
 import { AlphaStrikeUnit } from '../../../../classes/alpha-strike-unit';
 import { formationBonuses } from '../../../../data/formation-bonuses';
 import { unitGroupNames } from '../../../../data/group-names';

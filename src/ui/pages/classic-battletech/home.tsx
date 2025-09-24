@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom';
 import { IAppGlobals } from '../../app-router';
 import TextSection from '../../components/text-section';
 import UIPage from '../../components/ui-page';
-import { GiMissileMech } from "react-icons/gi";
-import { MdTableView } from 'react-icons/md';
+import { GiMissileMech as GiMissileMechRaw } from "react-icons/gi";
+import { MdTableView as MdTableViewRaw } from 'react-icons/md';
+// ...existing code...
+const GiMissileMech = GiMissileMechRaw as unknown as React.ComponentType<any>;
+const MdTableView = MdTableViewRaw as unknown as React.ComponentType<any>;
 
 export default class ClassicBattleTechHome extends React.Component<IClassicBattleTechHomeProps, IClassicBattleTechHomeState> {
     constructor(props: IClassicBattleTechHomeProps) {

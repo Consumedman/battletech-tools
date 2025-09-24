@@ -1,4 +1,7 @@
-import { FaSave, FaTimesCircle } from "react-icons/fa";
+import { FaSave as FaSaveRaw, FaTimesCircle as FaTimesCircleRaw } from "react-icons/fa";
+// ...existing code...
+const FaSave = FaSaveRaw as unknown as React.ComponentType<any>;
+const FaTimesCircle = FaTimesCircleRaw as unknown as React.ComponentType<any>;
 import * as React from 'react';
 import { Modal } from 'react-bootstrap';
 import InputCheckbox from './form_elements/input_checkbox';

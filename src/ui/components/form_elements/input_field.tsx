@@ -1,6 +1,10 @@
-import { FaChevronDown, FaChevronUp, FaQuestion } from "react-icons/fa";
+
 import * as React from 'react';
 import { Link } from 'react-router-dom';
+import { FaChevronDown as FaChevronDownRaw, FaChevronUp as FaChevronUpRaw, FaQuestion as FaQuestionRaw } from "react-icons/fa";
+const FaChevronDown = FaChevronDownRaw as unknown as React.ComponentType<any>;
+const FaChevronUp = FaChevronUpRaw as unknown as React.ComponentType<any>;
+const FaQuestion = FaQuestionRaw as unknown as React.ComponentType<any>;
 
 export default class InputField extends React.Component<IInputFieldProps, IInputFieldState> {
     constructor(props: IInputFieldProps) {

@@ -1,5 +1,7 @@
 import * as React from 'react';
-import { FaEdit, FaTrash } from 'react-icons/fa';
+import { FaEdit as FaEditRaw, FaTrash as FaTrashRaw } from 'react-icons/fa';
+const FaEdit = FaEditRaw as unknown as React.ComponentType<any>;
+const FaTrash = FaTrashRaw as unknown as React.ComponentType<any>;
 import { BattleMech } from '../../../../classes/battlemech';
 import { BattleMechGroup } from '../../../../classes/battlemech-group';
 import { IAppGlobals } from '../../../app-router';

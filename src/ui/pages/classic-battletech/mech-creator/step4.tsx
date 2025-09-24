@@ -1,5 +1,8 @@
 import React from 'react';
-import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
+import { FaArrowCircleLeft as FaArrowCircleLeftRaw, FaArrowCircleRight as FaArrowCircleRightRaw } from "react-icons/fa";
+// ...existing code...
+const FaArrowCircleLeft = FaArrowCircleLeftRaw as unknown as React.ComponentType<any>;
+const FaArrowCircleRight = FaArrowCircleRightRaw as unknown as React.ComponentType<any>;
 import { Link } from 'react-router-dom';
 import { makeRange } from '../../../../utils/makeRange';
 import { IAppGlobals } from '../../../app-router';

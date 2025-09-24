@@ -1,5 +1,10 @@
 import React from 'react';
-import { FaArrowCircleLeft, FaGlasses, FaMicroscope, FaPrint } from "react-icons/fa";
+import { FaArrowCircleLeft as FaArrowCircleLeftRaw, FaGlasses as FaGlassesRaw, FaMicroscope as FaMicroscopeRaw, FaPrint as FaPrintRaw } from "react-icons/fa";
+// ...existing code...
+const FaArrowCircleLeft = FaArrowCircleLeftRaw as unknown as React.ComponentType<any>;
+const FaGlasses = FaGlassesRaw as unknown as React.ComponentType<any>;
+const FaMicroscope = FaMicroscopeRaw as unknown as React.ComponentType<any>;
+const FaPrint = FaPrintRaw as unknown as React.ComponentType<any>;
 import { Link } from 'react-router-dom';
 import { CONST_BATTLETECH_URL } from '../../../../configVars';
 import { IAppGlobals } from '../../../app-router';

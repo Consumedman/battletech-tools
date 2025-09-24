@@ -1,4 +1,6 @@
-import { FaTimesCircle } from "react-icons/fa";
+import { FaTimesCircle as FaTimesCircleRaw } from "react-icons/fa";
+// ...existing code...
+const FaTimesCircle = FaTimesCircleRaw as unknown as React.ComponentType<any>;
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { IAppGlobals } from '../app-router';

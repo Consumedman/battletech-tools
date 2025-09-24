@@ -1,6 +1,10 @@
 import React from 'react';
 import { MineExplosion } from "react-game-icons";
-import { FaEdit, FaPlus, FaTrash } from "react-icons/fa";
+import { FaEdit as FaEditRaw, FaPlus as FaPlusRaw, FaTrash as FaTrashRaw } from "react-icons/fa";
+// ...existing code...
+const FaEdit = FaEditRaw as unknown as React.ComponentType<any>;
+const FaPlus = FaPlusRaw as unknown as React.ComponentType<any>;
+const FaTrash = FaTrashRaw as unknown as React.ComponentType<any>;
 import { IEquipmentItem } from "../../data/data-interfaces";
 import { mechClanEquipmentEnergy } from '../../data/mech-clan-equipment-weapons-energy';
 import { mechISEquipmentBallistic } from '../../data/mech-is-equipment-weapons-ballistic';

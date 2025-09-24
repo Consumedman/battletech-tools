@@ -1,5 +1,10 @@
 import React from 'react';
-import { FaArrowCircleLeft, FaArrowCircleRight, FaPlus, FaTrash } from "react-icons/fa";
+import { FaArrowCircleLeft as FaArrowCircleLeftRaw, FaArrowCircleRight as FaArrowCircleRightRaw, FaPlus as FaPlusRaw, FaTrash as FaTrashRaw } from "react-icons/fa";
+// ...existing code...
+const FaArrowCircleLeft = FaArrowCircleLeftRaw as unknown as React.ComponentType<any>;
+const FaArrowCircleRight = FaArrowCircleRightRaw as unknown as React.ComponentType<any>;
+const FaPlus = FaPlusRaw as unknown as React.ComponentType<any>;
+const FaTrash = FaTrashRaw as unknown as React.ComponentType<any>;
 import { Link } from 'react-router-dom';
 import { IEquipmentItem } from '../../../../data/data-interfaces';
 import { sortEquipment } from '../../../../utils';

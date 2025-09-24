@@ -1,5 +1,8 @@
 
-import { FaExclamationCircle, FaExclamationTriangle } from "react-icons/fa";
+import { FaExclamationCircle as FaExclamationCircleRaw, FaExclamationTriangle as FaExclamationTriangleRaw } from "react-icons/fa";
+// ...existing code...
+const FaExclamationCircle = FaExclamationCircleRaw as unknown as React.ComponentType<any>;
+const FaExclamationTriangle = FaExclamationTriangleRaw as unknown as React.ComponentType<any>;
 import React from 'react';
 import { checkFullRestoreData, getFullBackup, IFullBackup, IRestoreMessage, restoreFullBackup } from '../../../dataSaves';
 import { IAppGlobals } from '../../app-router';

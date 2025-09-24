@@ -1,5 +1,9 @@
 import React from 'react';
-import { FaCheckCircle, FaSync, FaTimesCircle } from "react-icons/fa";
+import { FaCheckCircle as FaCheckCircleRaw, FaSync as FaSyncRaw, FaTimesCircle as FaTimesCircleRaw } from "react-icons/fa";
+// ...existing code...
+const FaCheckCircle = FaCheckCircleRaw as unknown as React.ComponentType<any>;
+const FaSync = FaSyncRaw as unknown as React.ComponentType<any>;
+const FaTimesCircle = FaTimesCircleRaw as unknown as React.ComponentType<any>;
 import { IASMULUnit } from '../../classes/alpha-strike-unit';
 import { getMULASSearchResults } from '../../utils';
 import { addCommas } from "../../utils/addCommas";
