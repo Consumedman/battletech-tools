@@ -1310,10 +1310,10 @@ export class AlphaStrikeUnit {
             this.currentTMM = this.currentTMM.substring( 0, this.currentTMM.length - 1);
 
         // Calculate To-Hits with Criticals
-        this.currentToHitShort = this.currentSkill + this.currentHeat + currentFCHits * 2; // + currentEngineHits;
+        this.currentToHitShort = this.currentSkill + 1 + this.currentHeat + currentFCHits * 2; // + currentEngineHits;
         this.currentToHitMedium = this.currentSkill + 2 + this.currentHeat + currentFCHits * 2; // + currentEngineHits;
-        this.currentToHitLong = this.currentSkill + 4 + this.currentHeat + currentFCHits * 2; // + currentEngineHits;
-        this.currentToHitExtreme = this.currentSkill + 6 + this.currentHeat + currentFCHits * 2; // + currentEngineHits;
+        this.currentToHitLong = this.currentSkill + 3 + this.currentHeat + currentFCHits * 2; // + currentEngineHits;
+        this.currentToHitExtreme = this.currentSkill + 4 + this.currentHeat + currentFCHits * 2; // + currentEngineHits;
 
         this.currentHeat = this.currentHeat / 1;
 
